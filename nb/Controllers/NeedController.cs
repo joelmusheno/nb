@@ -1,10 +1,9 @@
 ﻿using System;
 using nb.Infrastructure;
 using nb.Models;
-
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using System.Linq;
+
 namespace nb
 {
 	public class NeedController : Controller
@@ -36,6 +35,7 @@ namespace nb
 		public ActionResult Create(Need need)
 		{
 			if (ModelState.IsValid) {
+				need.CreateDate = DateTime.Now;
 				NeedRepository.Save(need);
 				return RedirectToAction("Index");
 			}
