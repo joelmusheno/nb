@@ -9,6 +9,7 @@ using System.Reflection;
 using nb.Infrastructure;
 using nb.Models.Foundation;
 using Ninject.Web.WebApi;
+using System.Web.Optimization;
 
 namespace nb
 {
@@ -18,9 +19,6 @@ namespace nb
 		{
 			var kernel = new StandardKernel();
 			kernel.Load(Assembly.GetExecutingAssembly());
-
-
-
 			return kernel;
 		}
 
@@ -31,6 +29,7 @@ namespace nb
 			AreaRegistration.RegisterAllAreas();
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
+			BundleConfig.RegisterBundles(BundleTable.Bundles);
 		}
 
 

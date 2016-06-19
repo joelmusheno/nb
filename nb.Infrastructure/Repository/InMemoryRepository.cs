@@ -30,8 +30,10 @@ namespace nb.Infrastructure
 
 		public T Save(T entity)
 		{
-			if (entity.Id <= 0)
+			if (entity.Id <= 0){
 				entity.Id = data.Keys.Count + 1;
+				data.Add(entity.Id, entity);
+			}
 			else
 				data[entity.Id] = entity;
 

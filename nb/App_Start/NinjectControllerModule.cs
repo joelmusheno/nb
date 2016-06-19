@@ -9,9 +9,8 @@ namespace nb
 	{
 		public override void Load()
 		{
-			Bind(typeof(IBaseRepository<Need>)).To(typeof(InMemoryRepository<Need>));
-
-			Bind(typeof(IBaseRepository<IBaseModel>)).To(typeof(InMemoryRepository<IBaseModel>));
+			Bind(typeof(IBaseRepository<Need>)).To(typeof(InMemoryRepository<Need>)).InSingletonScope();
+			//Bind(typeof(IBaseRepository<IBaseModel>)).To(typeof(InMemoryRepository<IBaseModel>));
 		}
 	}
 }

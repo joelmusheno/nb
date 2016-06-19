@@ -1,14 +1,15 @@
 ﻿@model IList<nb.Models.Need>
 
-<div class='hslice' id='1'>
-   <h2 class='entry-title'>Outstanding Needs</h2>
+<div>
+	
+   <h2>Outstanding Needs</h2>
+	
    <a rel='feedurl' href='/Dinners/WebSliceUpcoming' style='display: none;'></a>
    <ul class="">
-       @foreach (var need in Model)
-       {        
+       @foreach (var need in Model) {        
            <li>
                @Html.ActionLink(need.Name, "Details", new { id = need.Id })
-               on <strong>@need.Id @need.CreateDate.ToString("HH:mm tt")</strong> 
+               on <strong>@need.CreateDate.ToString("HH:mm tt")</strong> 
            </li>
        }
    </ul>
