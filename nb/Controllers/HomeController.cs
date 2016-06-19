@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using nb.Infrastructure;
 using nb.Models;
+using System.Linq;
 
 namespace nb.Controllers
 {
@@ -17,12 +18,7 @@ namespace nb.Controllers
 
 		public ActionResult Index()
 		{
-			
-			var mvcName = typeof(Controller).Assembly.GetName();
-			var isMono = Type.GetType("Mono.Runtime") != null;
-
-			ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-			ViewData["Runtime"] = isMono ? "Mono" : ".NET";
+			ViewBag.TotalRequests = NeedsRepository.Query().Count();
 
 			return View();
 		}
