@@ -19,6 +19,9 @@ namespace nb
 		{
 			var kernel = new StandardKernel();
 			kernel.Load(Assembly.GetExecutingAssembly());
+
+			GlobalConfiguration.Configuration.DependencyResolver = new NinjectResolver(kernel);
+
 			return kernel;
 		}
 
@@ -30,6 +33,8 @@ namespace nb
 			GlobalConfiguration.Configure(WebApiConfig.Register);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
 		}
 
 
