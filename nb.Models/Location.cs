@@ -1,5 +1,6 @@
 ﻿using System;
 using nb.Models.Foundation;
+
 namespace nb.Models
 {
 	public class Location : IBaseModel
