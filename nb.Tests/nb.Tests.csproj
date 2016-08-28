@@ -82,9 +82,18 @@
       <Project>{1BAAF0B1-E82A-4F83-B6D4-310EA0DBDFF9}</Project>
       <Name>nb</Name>
     </ProjectReference>
+    <ProjectReference Include="..\nb.Infrastructure\nb.Infrastructure.csproj">
+      <Project>{638C6B8E-D2C4-4DF0-9F26-EFC9E364EE89}</Project>
+      <Name>nb.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\nb.Models\nb.Models.csproj">
+      <Project>{9D9CAB0C-7F77-4232-9E3D-E7B65B130435}</Project>
+      <Name>nb.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="NeedRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
