@@ -4,7 +4,7 @@ mono:
 solution: nb.sln
 install:
   - nuget restore nb.sln
-  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release nb.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./nb.Tests/bin/Release/nb.Tests.dll  
