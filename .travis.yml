@@ -7,4 +7,4 @@ install:
   - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release nb.sln
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./nb.Tests/bin/Release/nb.Tests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./nb.Tests/bin/Release/nb.Tests.dll  
