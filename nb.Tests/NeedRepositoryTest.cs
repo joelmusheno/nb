@@ -21,13 +21,5 @@ namespace nb.Tests
 			Assert.IsNotNull(repo);
 		}
 
-		[Test]
-		public void ShouldThrowException()
-		{
-			InMemoryRepository<Need> repo = null;
-			repo.Save(null);
-
-			Assert.IsTrue(true);
-		}
 	}
 }
