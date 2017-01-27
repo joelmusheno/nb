@@ -14,7 +14,6 @@ install:
   - ./configure
   - make
   - sudo make install
-  - cd ../../csMACnz/Coveralls.net-Samples
 script:
   - xbuild /p:Configuration=Release nb.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./nb.Tests/bin/Release/nb.Tests.dll  
