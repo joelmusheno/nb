@@ -1,7 +1,4 @@
 language: csharp
-mono:
- - latest
-solution: nb.sln
 install:
   - nuget restore nb.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
