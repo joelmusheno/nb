@@ -6,7 +6,7 @@ script:
   - xbuild /p:Configuration=Release nb.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./nb.Tests/bin/Release/nb.Tests.dll  
   - export LD_LIBRARY_PATH=/usr/local/lib
-  - mono --debug --profile=monocov:outfile=monocovCoverage.cov,+nb ./src/packages/NUnit.Console.3.0.0-beta-3/tools/nunit-console.exe --process=Single ./src/GameOfLife.NUnit.Tests/bin/Release/nb.dll
+  - mono --debug --profile=monocov:outfile=monocovCoverage.cov,+nb ./src/packages/NUnit.Console.3.0.0-beta-3/tools/nunit-console.exe --process=Single ./src/nb.Tests/bin/Release/nb.dll
   - monocov --export-xml=monocovCoverage monocovCoverage.cov
   - cat monocovCoverage.cov
   - ls monocovCoverage
